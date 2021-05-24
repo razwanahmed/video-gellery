@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet">
+ 
+    <title> Make Video Gallery </title>
+
+</head>
+<body>
+    
+
+   <div class="container"> 
+       <h1> HOW TO MAKE A VIDEO GALLERY </h1>
+       <div class="row">
+           <div class="col">
+               <div class="feature-img">
+                   <img src="media/img1.jpg" width="100%">
+
+                   <img src="media/play.png" class="play-btn" width="15%" onclick="playVideo('media/Badshah.mp4')">
+               </div>
+           </div>
+
+           <div class="col"> 
+               <div class="small-img-row">
+                   <img src="media/img2.png"  width="40%">
+                   <img src="media/play.png" class="play-btnn" width="15%" onclick="playVideo('media/বুকের_ভিতরে.mp4')">
+                   <p> how to add multiple viedos in a website  or  make a video gallery </p>
+               </div>
+
+               <div class="small-img-row">
+                <img src="media/img3.png"  width="40%">
+                <img src="media/play.png" class="play-btnn" width="15%" onclick="playVideo('media/Na_Thaka_Jure.mp4')">
+                <p> how to add multiple viedos in a website  or  make a video gallery </p>
+            </div>
+
+            <div class="small-img-row">
+                <img src="media/img4.png"  width="40%">
+                <img src="media/play.png" class="play-btnn" width="15%"  onclick="playVideo('media/DARI_KOMA.mp4')">
+                <p> how to add multiple viedos in a website  or  make a video gallery </p>
+            </div>
+
+
+           </div>
+
+       </div>
+   </div>
+
+
+
+
+<div class="video-player" id="videoPlayer"> 
+     <video width="100%" controls  id="myVideo">
+         <source src="media/Badshah.mp4" >
+     </video>
+
+     <img src="media/close.png" class="close-btn" onclick="stopVideo()">
+</div>
+    
+
+
+
+<script> 
+
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo (){
+        videoPlayer.style.display = "none";
+    }
+
+
+
+  function playVideo(file){
+      myVideo.src = file;
+      videoPlayer.style.display ="block";
+  }
+
+</script>
+
+
+
+</body>
+</html>
